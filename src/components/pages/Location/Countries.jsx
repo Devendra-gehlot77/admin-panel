@@ -56,12 +56,12 @@ export default function Countries() {
         {/* header */}
         <div className="flex justify-between items-center mb-6">
           <div>
-            <h2 className="text-2xl font-bold">Admins Listing</h2>
+            <h2 className="text-2xl font-bold">Countries  Listing</h2>
             <div className="flex">
               <Link to={"/dashboard/dashboardhome"}>
                 <p className="text-sm text-blue-500 mt-1 cursor-pointer">Dashboard </p>
               </Link>
-              <span> / Admins</span>
+              <span> / Countries</span>
             </div>
           </div>
           <div className="space-x-3 flex ">

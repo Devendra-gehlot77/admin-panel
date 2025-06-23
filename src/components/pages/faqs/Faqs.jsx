@@ -58,7 +58,13 @@ export default function Faqs() {
       {/* Header */}
       <div className="mb-4">
         <h2 className="text-2xl font-semibold">Faqs Listing</h2>
-        <p className="text-sm text-blue-500">Dashboard / Faqs Listing</p>
+         <div className="flex">
+                    <Link to={"/dashboard/dashboardhome"}>
+                      {" "}
+                      <p className="text-sm text-blue-500 mt-1">Dashboard /  </p>{" "}
+                    </Link>{" "}
+                    <span className="ms-1 ">   Faqs Listing</span>
+                  </div>
       </div>
 
       {/* Table Actions */}

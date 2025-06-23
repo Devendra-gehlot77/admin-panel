@@ -56,8 +56,14 @@ export default function Materials() {
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <div>
-            <h2 className="text-2xl font-bold">Admins Listing</h2>
-            <p className="text-sm text-blue-500 mt-1">Dashboard / Admins</p>
+            <h2 className="text-2xl font-bold">Materials Listing</h2>
+              <div className="flex">
+                        <Link to={"/dashboard/dashboardhome"}>
+                          {" "}
+                          <p className="text-sm text-blue-500 mt-1">Dashboard </p>{" "}
+                        </Link>{" "}
+                        <span className="ms-1 "> / Materials</span>
+                      </div>
           </div>
           <div className="space-x-3 flex">
             <button

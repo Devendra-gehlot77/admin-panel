@@ -5,6 +5,7 @@ import { IoMdAirplane } from "react-icons/io";
 import { MdDeleteForever, MdOutlineAirplanemodeInactive } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 import { VscArrowSwap } from "react-icons/vsc";
+import { Link } from "react-router-dom";
 
 export default function WhyChooseUs() {
   const [showPopup, setShowPopup] = useState();
@@ -71,10 +72,14 @@ export default function WhyChooseUs() {
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <div>
-            <h2 className="text-2xl font-bold">Admins Listing</h2>
-            <p className="text-sm text-blue-500 mt-1 cursor-pointer">
-              Dashboard / Admins
-            </p>
+            <h2 className="text-2xl font-bold">Why Choose Us Listing</h2>
+            <div className="flex">
+              <Link to={"/dashboard/dashboardhome"}>
+                {" "}
+                <p className="text-sm text-blue-500 mt-1">Dashboard </p>{" "}
+              </Link>{" "}
+              <span className="ms-1 "> / Why Choose Us</span>
+            </div>
           </div>
           <div className="space-x-3 flex">
             <button

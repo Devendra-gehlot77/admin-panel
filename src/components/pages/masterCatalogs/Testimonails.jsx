@@ -68,11 +68,18 @@ export default function Testimonails() {
 
   return (
     <>
-      <div className="p-6 min-h-screen bg-gray-100">
+      <div className="p-6 min-h-screen bg-gray-100 text-[#76838F]">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <div>
-            <h2 className="text-2xl font-bold">Admins Listing</h2>
+            <h2 className="text-2xl font-bold">Testimonials Listing</h2>
+            <div className="flex">
+            <Link to={"/dashboard/dashboardhome"}>
+              {" "}
+              <p className="text-sm text-blue-500 mt-1">Dashboard </p>{" "}
+            </Link>{" "}
+            <span className="ms-1 text-[#76838F] "> / Testimonials </span>
+          </div>
           </div>
           <div className="space-x-3 flex">
             <button
@@ -118,7 +125,7 @@ export default function Testimonails() {
         </div>
 
         {/* Table */}
-        <div className="overflow-x-auto shadow rounded-lg bg-white text-[#76838F]">
+        <div className="overflow-x-auto shadow rounded-lg bg-white ">
           <div className="mb-3 flex justify-between">
             {/* Table input and search */}
             <div className="flex ms-2 mt-2">

@@ -1,14 +1,21 @@
 import React from "react";
 import { MdDelete } from "react-icons/md";
 import { FaPlus } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function EditPaymentGateway() {
   return (
     <div className="p-6 bg-[#F1F4F5] min-h-screen min-w-[82%] fixed">
       {/* Header */}
       <div className="mb-6">
-        <h2 className="text-2xl font-bold">Edit Payment Gateway</h2>
-        <p className="text-sm text-blue-500 mt-1">Dashboard / Payment Gateway / Edit Payment Gateway</p>
+        <h2 className="text-2xl font-bold">Edit Payment Gateway </h2>
+        <div className="flex">
+            <Link to={"/dashboard/dashboardhome"}>
+              {" "}
+              <p className="text-sm text-blue-500 mt-1">Dashboard / <Link to={'/dashboard/payment-gateway'} > <span>  Payment Gateway</span></Link> </p>{" "}
+            </Link>{" "}
+            <span className="ms-1 "> /  Edit Payment Gateway</span>
+          </div>
       </div>
 
       {/* Name Field */}

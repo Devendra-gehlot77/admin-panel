@@ -98,8 +98,14 @@ export default function ProductCategories() {
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <div>
-            <h2 className="text-2xl font-bold">Admins Listing</h2>
-            <p className="text-sm text-blue-500 mt-1">Dashboard / Admins</p>
+            <h2 className="text-2xl font-bold">Categories Listing</h2>
+            <div className="flex">
+              <Link to={"/dashboard/dashboardhome"}>
+                {" "}
+                <p className="text-sm text-blue-500 mt-1">Dashboard </p>{" "}
+              </Link>{" "}
+              <span className="ms-1 "> / Categories</span>
+            </div>
           </div>
           <div className="space-x-3 flex">
             <button
@@ -130,9 +136,18 @@ export default function ProductCategories() {
           }
         >
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <input className="border p-2 rounded cursor-pointer" placeholder="Name" />
-            <input className="border p-2 rounded cursor-pointer" placeholder="Email Address" />
-            <input className="border p-2 rounded cursor-pointer" placeholder="Mobile Number" />
+            <input
+              className="border p-2 rounded cursor-pointer"
+              placeholder="Name"
+            />
+            <input
+              className="border p-2 rounded cursor-pointer"
+              placeholder="Email Address"
+            />
+            <input
+              className="border p-2 rounded cursor-pointer"
+              placeholder="Mobile Number"
+            />
             <div className="flex space-x-2">
               <button className="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer">
                 Filter Admins
@@ -171,16 +186,24 @@ export default function ProductCategories() {
             <div>
               <ul className="flex gap-6 bg-[#F1F4F5] me-2 mt-2 items-center content-center">
                 <li className="px-2 py-1 cursor-pointer">
-                  <button><VscArrowSwap /></button>
+                  <button>
+                    <VscArrowSwap />
+                  </button>
                 </li>
                 <li className="cursor-pointer">
-                  <button><MdDeleteForever /></button>
+                  <button>
+                    <MdDeleteForever />
+                  </button>
                 </li>
                 <li className="cursor-pointer">
-                  <button><AiFillFileText /></button>
+                  <button>
+                    <AiFillFileText />
+                  </button>
                 </li>
                 <li className="cursor-pointer">
-                  <button><FaFile /></button>
+                  <button>
+                    <FaFile />
+                  </button>
                 </li>
               </ul>
             </div>
@@ -230,7 +253,9 @@ export default function ProductCategories() {
             {selectedCategory && (
               <div className="fixed inset-0 bg-transparent bg-opacity-40 flex justify-center items-start pt-20 z-50">
                 <div className="bg-white w-full max-w-xl p-6 rounded shadow-lg animate-slideDown relative">
-                  <h3 className="text-lg font-semibold mb-4">Update Category</h3>
+                  <h3 className="text-lg font-semibold mb-4">
+                    Update Category
+                  </h3>
                   <div className="space-y-4">
                     <div>
                       <label className="block">Select Category</label>

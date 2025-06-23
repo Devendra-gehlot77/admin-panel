@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFile } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function CreateFaqs  ()  {
   return (
@@ -7,7 +8,13 @@ export default function CreateFaqs  ()  {
       {/* Header */}
       <div className="mb-4">
         <h1 className="text-2xl font-semibold">Create Faq</h1>
-        <p className="text-sm text-blue-500">Dashboard / Faqs / Create Faq</p>
+         <div className="flex">
+            <Link to={"/dashboard/dashboardhome"}>
+              {" "}
+              <p className="text-sm text-blue-500 mt-1">Dashboard / <Link to={'/dashboard/faqs'} > <span>  Faqs</span></Link> </p>{" "}
+            </Link>{" "}
+            <span className="ms-1 "> /  Create Faq </span>
+          </div>
       </div>
 
       {/* Form Container */}

@@ -13,9 +13,13 @@ export default function PaymentGateway() {
       <div className="flex justify-between items-center mb-6">
         <div>
           <h2 className="text-2xl font-bold">Payment Gateway Listing</h2>
-          <p className="text-sm text-blue-500 mt-1">
-            Dashboard / Payment Gateway Listing
-          </p>
+          <div className="flex">
+            <Link to={"/dashboard/dashboardhome"}>
+              {" "}
+              <p className="text-sm text-blue-500 mt-1">Dashboard </p>{" "}
+            </Link>{" "}
+            <span className="ms-1 "> / Payment Gateway Listing</span>
+          </div>
         </div>
       </div>
 

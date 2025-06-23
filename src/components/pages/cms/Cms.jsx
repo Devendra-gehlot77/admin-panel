@@ -16,7 +16,15 @@ const CmsPagesListing = () => {
       {/* Header */}
       <div className="mb-4">
         <h1 className="text-2xl font-semibold">CMS Pages Listing</h1>
-        <p className="text-sm text-blue-500">Dashboard / CMS Pages</p>
+        <div className="flex">
+          <Link to={"/dashboard/dashboardhome"}>
+            {" "}
+            <p className="text-sm text-blue-500 mt-1">
+              Dashboard {" "}
+            </p>{" "}
+          </Link>{" "}
+          <span className="ms-1 "> / CMS Pages </span>
+        </div>
       </div>
 
       {/* Table */}

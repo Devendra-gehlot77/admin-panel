@@ -5,6 +5,7 @@ import { VscArrowSwap } from "react-icons/vsc";
 import { MdDeleteForever, MdOutlineAirplanemodeInactive } from "react-icons/md";
 import { AiFillFileText } from "react-icons/ai";
 import { IoMdAirplane } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 export default function Newsletters() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -31,7 +32,13 @@ export default function Newsletters() {
       <div className="flex justify-between items-center mb-6">
         <div>
           <h2 className="text-2xl font-bold">Newsletters Management</h2>
-          <p className="text-sm text-blue-500 mt-1">Dashboard / Newsletters</p>
+             <div className="flex">
+                      <Link to={"/dashboard/dashboardhome"}>
+                        {" "}
+                        <p className="text-sm text-blue-500 mt-1">Dashboard </p>{" "}
+                      </Link>{" "}
+                      <span className="ms-1 "> / Newsletters</span>
+                    </div>
         </div>
         <div className="space-x-3 flex">
           <button

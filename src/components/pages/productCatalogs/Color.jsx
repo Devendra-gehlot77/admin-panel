@@ -5,6 +5,7 @@ import { IoMdAirplane } from "react-icons/io";
 import { MdDeleteForever, MdOutlineAirplanemodeInactive } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 import { VscArrowSwap } from "react-icons/vsc";
+import { Link } from "react-router-dom";
 
 export default function Color() {
   const colors = [
@@ -33,8 +34,14 @@ export default function Color() {
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <div>
-          <h2 className="text-2xl font-bold">Admins Listing</h2>
-          <p className="text-sm text-blue-500 mt-1">Dashboard / Admins</p>
+          <h2 className="text-2xl font-bold">Color Listing</h2>
+           <div className="flex">
+            <Link to={"/dashboard/dashboardhome"}>
+              {" "}
+              <p className="text-sm text-blue-500 mt-1">Dashboard </p>{" "}
+            </Link>{" "}
+            <span className="ms-1 "> / Admins</span>
+          </div>
         </div>
         <div className="space-x-3 flex">
           <button
@@ -155,7 +162,7 @@ export default function Color() {
 
           {/* Edit Modal */}
           {selectedColor && (
-            <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-start pt-20 z-50">
+            <div className="fixed inset-0 bg-transparent bg-opacity-30 flex justify-center items-start pt-20 z-50">
               <div className="bg-white w-full max-w-xl p-6 rounded shadow-lg relative">
                 <h3 className="text-lg font-semibold mb-4">Update Color</h3>
                 <div className="space-y-4">
@@ -204,7 +211,7 @@ export default function Color() {
 
           {/* Add Modal */}
           {openAddColor && (
-            <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-start pt-20 z-50">
+            <div className="fixed inset-0 bg-transparent bg-opacity-30 flex justify-center items-start pt-20 z-50">
               <div className="bg-white w-full max-w-xl p-6 rounded shadow-lg relative">
                 <h3 className="text-lg font-semibold mb-4">Add New Color</h3>
                 <div className="space-y-4">

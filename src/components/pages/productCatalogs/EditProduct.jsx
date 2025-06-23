@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FiTrash2, FiPlus } from "react-icons/fi";
 import { FiSave } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 export default function EditProduct() {
   const [frontImage, setFrontImage] = useState(null);
@@ -9,6 +10,19 @@ export default function EditProduct() {
   return (
     <>
       <div className="p-6 bg-[#F1F4F5] min-h-screen  min-w-[82%]   overflow-y-scroll text-[#76838F]">
+        {/* header */}
+        <div className="flex justify-between items-center mb-6">
+          <div>
+            <h2 className="text-2xl font-bold">Products Listing</h2>
+            <div className="flex">
+              <Link to={"/dashboard/dashboardhome"}>
+                {" "}
+                <p className="text-sm text-blue-500 mt-1">Dashboard <Link to={'/dashboard/product'}> <span> / Products </span> </Link> </p>{" "} 
+              </Link>{" "}
+              <span className="ms-1 "> / Update Product</span>
+            </div>
+          </div>
+        </div>
         {/* basic info  */}
         <div className="p-6 bg-white rounded-xl shadow-xl max-w-7xl m-5">
           <h2 className="text-2xl font-semibold mb-6">Basic Info</h2>

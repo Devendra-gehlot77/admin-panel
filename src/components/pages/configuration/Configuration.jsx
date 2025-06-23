@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Configuration() {
   return (
@@ -6,7 +7,13 @@ export default function Configuration() {
       {/* Header */}
       <div className="mb-6">
         <h2 className="text-2xl font-bold">Configuration</h2>
-        <p className="text-sm text-blue-500 mt-1">Dashboard / Configuration</p>
+        <div className="flex">
+            <Link to={"/dashboard/dashboardhome"}>
+              {" "}
+              <p className="text-sm text-blue-500 mt-1">Dashboard </p>{" "}
+            </Link>{" "}
+            <span className="ms-1 "> / Configuration</span>
+          </div>
       </div>
 
       {/* Card */}
