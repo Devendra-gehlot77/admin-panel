@@ -27,28 +27,29 @@ export default function SideBar() {
   const [openEnquiry, setOpenEnquiry] = useState(null);
   const [openConfig, setOpenConfig] = useState(null);
 
-  const toggleMenu = () => {
-    setOpenMenu(!openMenu );
-  };
+  const toggleMenu = (menu) => {
+  setOpenMenu(openMenu === menu ? null : menu);
+};
 
-  const locationOpen = () => {
-    setOpenLocation(!openLocation);
-  };
+const locationOpen = (menu) => {
+  setOpenLocation(openLocation === menu ? null : menu);
+};
 
-  const masterCatalogs = () => {
-    setOpenMasterCatalogs(!openMasterCatalogs);
-  };
+const masterCatalogs = (menu) => {
+  setOpenMasterCatalogs(openMasterCatalogs === menu ? null : menu);
+};
 
-  const productCatalogs = () => {
-    setOpenProductCatalogs(!openProductCatalogs);
-  };
+const productCatalogs = (menu) => {
+  setOpenProductCatalogs(openProductCatalogs === menu ? null : menu);
+};
 
-  const enquiry = () => {
-    setOpenEnquiry(!openEnquiry);
-  };
-  const configuration = () => {
-    setOpenConfig(!openConfig);
-  };
+const enquiry = (menu) => {
+  setOpenEnquiry(openEnquiry === menu ? null : menu);
+};
+
+const configuration = (menu) => {
+  setOpenConfig(openConfig === menu ? null : menu);
+};
 
   return (
     <>
