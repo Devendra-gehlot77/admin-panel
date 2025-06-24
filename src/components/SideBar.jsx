@@ -51,12 +51,13 @@ export default function SideBar() {
     <>
       <div className="w-[22%] h-screen overflow-y-hidden bg-gray-800 text-[#76838F] p-4 space-y-2   ">
         {/* Logo */}
-        <div className="bg-[#3E8EF7] flex  ">
+        <div className="bg-[#3E8EF7] flex px-3 py-2 w-[100%]  ">
           <span className="">
             {" "}
             <img
               src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/company-profile/logo/cccfbdab-3bec-439f-88b9-5694698cd302-1670132652.png"
               alt=""
+              className="w-[100%]"
             />
           </span>
           <span className="text-white">furniture</span>
