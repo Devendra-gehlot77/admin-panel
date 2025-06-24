@@ -3,7 +3,10 @@ import { Nav_Context } from "../context/Context";
 import { Link } from "react-router-dom";
 import { GiCharacter } from "react-icons/gi";
 import { FaLocationArrow, FaSlidersH, FaWeixin } from "react-icons/fa";
-import { MdOutlineKeyboardDoubleArrowRight, MdOutlineWeb } from "react-icons/md";
+import {
+  MdOutlineKeyboardDoubleArrowRight,
+  MdOutlineWeb,
+} from "react-icons/md";
 import { AiFillFileText } from "react-icons/ai";
 import { RiArrowDownDoubleFill } from "react-icons/ri";
 
@@ -24,27 +27,27 @@ export default function SideBar() {
   const [openEnquiry, setOpenEnquiry] = useState(null);
   const [openConfig, setOpenConfig] = useState(null);
 
-  const toggleMenu = (menu) => {
-    setOpenMenu(openMenu === menu ? null : menu);
+  const toggleMenu = () => {
+    setOpenMenu(!openMenu );
   };
 
-  const locationOpen = (menu) => {
-    setOpenLocation(openLocation === menu ? null : menu);
+  const locationOpen = () => {
+    setOpenLocation(!openLocation);
   };
 
-  const masterCatalogs = (menu) => {
-    setOpenMasterCatalogs(openMasterCatalogs === menu ? null : menu);
+  const masterCatalogs = () => {
+    setOpenMasterCatalogs(!openMasterCatalogs);
   };
 
-  const productCatalogs = (menu) => {
-    setOpenProductCatalogs(openProductCatalogs === menu ? null : menu);
+  const productCatalogs = () => {
+    setOpenProductCatalogs(!openProductCatalogs);
   };
 
-  const enquiry = (menu) => {
-    setOpenEnquiry(openEnquiry === menu ? null : menu);
+  const enquiry = () => {
+    setOpenEnquiry(!openEnquiry);
   };
-  const configuration = (menu) => {
-    setOpenConfig(openConfig === menu ? null : menu);
+  const configuration = () => {
+    setOpenConfig(!openConfig);
   };
 
   return (
@@ -81,7 +84,13 @@ export default function SideBar() {
             </span>{" "}
             Users Management
           </div>
-          <span>{openMenu === "users" ?  <RiArrowDownDoubleFill />  : <MdOutlineKeyboardDoubleArrowRight />}</span>
+          <span>
+            {openMenu === "users" ? (
+              <RiArrowDownDoubleFill />
+            ) : (
+              <MdOutlineKeyboardDoubleArrowRight />
+            )}
+          </span>
         </button>
         {openMenu === "users" && (
           <div className="ml-4 space-y-1">
@@ -111,7 +120,13 @@ export default function SideBar() {
             </span>{" "}
             Location
           </div>
-          <span>{openLocation === "users" ?  <RiArrowDownDoubleFill />  : <MdOutlineKeyboardDoubleArrowRight />}</span>
+          <span>
+            {openLocation === "users" ? (
+              <RiArrowDownDoubleFill />
+            ) : (
+              <MdOutlineKeyboardDoubleArrowRight />
+            )}
+          </span>
         </button>
         {openLocation === "users" && (
           <div className="ml-4 space-y-1">
@@ -135,11 +150,17 @@ export default function SideBar() {
             </span>{" "}
             Master catalogs
           </div>
-          <span>{masterCatalogs === "users" ?  <RiArrowDownDoubleFill />  : <MdOutlineKeyboardDoubleArrowRight />}</span>
+          <span>
+            {masterCatalogs === "users" ? (
+              <RiArrowDownDoubleFill />
+            ) : (
+              <MdOutlineKeyboardDoubleArrowRight />
+            )}
+          </span>
         </button>
         {openMasterCatalogs === "users" && (
           <div className="ml-4 space-y-1">
-            <Link 
+            <Link
               to="/dashboard/slider"
               className="block py-1 px-2 hover:bg-gray-700 rounded"
             >
@@ -177,7 +198,13 @@ export default function SideBar() {
             </span>{" "}
             Product catalogs
           </div>
-          <span>{openProductCatalogs === "users" ? <RiArrowDownDoubleFill />  : <MdOutlineKeyboardDoubleArrowRight />}</span>
+          <span>
+            {openProductCatalogs === "users" ? (
+              <RiArrowDownDoubleFill />
+            ) : (
+              <MdOutlineKeyboardDoubleArrowRight />
+            )}
+          </span>
         </button>
         {openProductCatalogs === "users" && (
           <div className="ml-4 space-y-1">
@@ -219,7 +246,13 @@ export default function SideBar() {
             </span>{" "}
             Enquirys
           </div>
-          <span>{openEnquiry === "users" ? <RiArrowDownDoubleFill />  : <MdOutlineKeyboardDoubleArrowRight />}</span>
+          <span>
+            {openEnquiry === "users" ? (
+              <RiArrowDownDoubleFill />
+            ) : (
+              <MdOutlineKeyboardDoubleArrowRight />
+            )}
+          </span>
         </button>
         {openEnquiry === "users" && (
           <div className="ml-4 space-y-1">
@@ -249,7 +282,13 @@ export default function SideBar() {
             </span>{" "}
             configuration
           </div>
-          <span>{openConfig === "users" ? <RiArrowDownDoubleFill />  : <MdOutlineKeyboardDoubleArrowRight />}</span>
+          <span>
+            {openConfig === "users" ? (
+              <RiArrowDownDoubleFill />
+            ) : (
+              <MdOutlineKeyboardDoubleArrowRight />
+            )}
+          </span>
         </button>
         {openConfig === "users" && (
           <div className="ml-4 space-y-1">
@@ -269,32 +308,28 @@ export default function SideBar() {
         )}
 
         {/* faq */}
-        <Link to={'/dashboard/faqs'} >
-        <button
-          className="w-full flex justify-between items-center py-2 px-3 hover:bg-gray-700 rounded cursor-pointer"
-          >
-          <div className="flex">
-            <span className="pe-4">
-              <FaWeixin  />
-            </span>{" "}
-            faqs
-          </div>
-        </button>
-          </Link>
+        <Link to={"/dashboard/faqs"}>
+          <button className="w-full flex justify-between items-center py-2 px-3 hover:bg-gray-700 rounded cursor-pointer">
+            <div className="flex">
+              <span className="pe-4">
+                <FaWeixin />
+              </span>{" "}
+              faqs
+            </div>
+          </button>
+        </Link>
 
         {/* CMS Pages  */}
-        <Link to={'/dashboard/cms'} >
-        <button
-          className="w-full flex justify-between items-center py-2 px-3 hover:bg-gray-700 rounded cursor-pointer"
-          >
-          <div className="flex">
-            <span className="pe-4">
-              <AiFillFileText  />
-            </span>{" "}
-            CMS Pages
-          </div>
-        </button>
-          </Link>
+        <Link to={"/dashboard/cms"}>
+          <button className="w-full flex justify-between items-center py-2 px-3 hover:bg-gray-700 rounded cursor-pointer">
+            <div className="flex">
+              <span className="pe-4">
+                <AiFillFileText />
+              </span>{" "}
+              CMS Pages
+            </div>
+          </button>
+        </Link>
       </div>
     </>
   );
